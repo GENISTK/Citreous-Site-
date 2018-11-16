@@ -1,5 +1,8 @@
 Development:
-    Several tasks were already complete by time I created this todo so there may be a lot of stuff missing.
+    Several tasks were already complete by time I created this todo so there may be a lot of missing tasks. I estimate
+    that roughly 20% of the site is already complete.
+
+    Repo: https://github.com/GENISTK/Citreous-Site-
 
     Priority Timeline
         @critical Few hours.
@@ -7,12 +10,13 @@ Development:
         @medium one week.
         @low No real timeline.
 
-    Note that this project is not on any real timeline so prioirity isn't the end all timeline.
+    Note that this project is not on any real timeline so priority isn't very serious.
 
     Custom Development Tag's
         @medium for tasks that are not high, low, or critical.
         @temp for tasks that are being implemented with the knowledge that it will not be permenant
         @test for tasks that are implemented that are primarily being tested. 
+        @unsure for tasks that I am unsure if I will actually implement or not.
 
     ☐ Get compendium filter to work @today @high 
         This is already sort of done I just need to work out kinks with the setState statements.
@@ -70,7 +74,58 @@ Development:
                 Name
                 CreatedOn         
         There is probably more but I can't think of anything else atm.       
-            
+    ☐ Create an account settings page
+        What would be displayed/changeable
+            Disable Compendium (Will immediately log user out)
+            All of forum related items
+    ☐ Roadmap @unsure
+        It might be nice to have a trello board or custom graph of planned features. If we announce our game before we have made it, we could
+        get/keep people's attention by having an up-to-date roadmap.
+    ☐ Database Update GUI @low 
+        The database is very relational and it is kind of annoying to manual insert new data. It would be nice
+        to have a gui that makes it easy to add new entries. Could be done with a temp page on site or I could just create a php
+        page. The PHP page is probably better for security reasons. 
+    ☐ Refactor code to meet security and design standards
+        A lot of development has been using test/ad-hoc programming and I want to go back through and eventually make everything
+        follow industrial standards. I care less about site structure and more about user information security and hacking attempts.
+        Because the site is created with JavaScript, a lot of the site infrastructure is exposed so specail attention needs to 
+        be given to the code. I may even need to encrypt the code with code decrypters.
+
+        Extra attention should be given to pieces of code that interact with the backend. I don't want a user to so something
+        I don't want by simply changing a line of JS. This means that the API should have restrictions and verifications. This
+        goes back to session id's.
+
+        It is worth noting that we will not be storing sensitive information. The most sensative information we will be is storing usernames/google id's. 
+        I may forgo a forum specifically so that we don't have to store more user information.
+
+        I did some research and found security standards that should be followed.
+        https://medium.com/@nodepractices/were-under-attack-23-node-js-security-best-practices-e33c146cb87d
+            1. Use Linter Security rules: https://github.com/nodesecurity/eslint-plugin-security
+            2. Limit concurrent requests using a middle ware (AWS will handle this for us)
+            3. Don't store plain-text secrets in configuration files or source code.
+            4. Prevent query injection vulnerabilities with ORM/ODM libraries.
+            5. Set when processes should crash to avoid DOSattacks
+            6. Adjust HTTP response headers for enhanced security
+            7. Use tools like npm audit to detect vulnerable dependencies
+            8. Avoid using Node.js crypto library for passwords, use Bcrypt
+            9. Escape HTML, JS, and CSS output
+            10. Validate incoming JSON schemas
+            11. Support blacklisting JWT tokens
+            6.12. Limit the allwoed login requests of each user (We are going to use Google/Apple login)
+            13. Run Node.js as a non-root user
+            14. Limit payload size using a reverse-proxy or a middleware
+            15. Avoid JavaScript eval statements
+            16. Prevent evil RegEx from overloading your single thread execution
+            17. Avoid module loading using a variable
+            18. Run unsafe code in a sandbox
+            19. Take extra care when working with child processes
+            20. Hide error details from clients
+            21. Configure 2FA for npm or Yarn (again login will be handled)
+            22. Modify session middleware settings
+            23. A list of 40 generic security advice (see list)
+
+
+
 Community: 
     These are tasks related to blogs, forums posts, news, events, etc.. 
 
