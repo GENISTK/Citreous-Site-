@@ -1,0 +1,80 @@
+Development:
+    Several tasks were already complete by time I created this todo so there may be a lot of stuff missing.
+
+    Priority Timeline
+        @critical Few hours.
+        @high One or two days.
+        @medium one week.
+        @low No real timeline.
+
+    Note that this project is not on any real timeline so prioirity isn't the end all timeline.
+
+    Custom Development Tag's
+        @medium for tasks that are not high, low, or critical.
+        @temp for tasks that are being implemented with the knowledge that it will not be permenant
+        @test for tasks that are implemented that are primarily being tested. 
+
+    ☐ Get compendium filter to work @today @high 
+        This is already sort of done I just need to work out kinks with the setState statements.
+    ☐ Learn to correctly work with variables in REACT.js @medium
+        At this point I am using a combination of global variables (within classes), and this.state. I was lead to believe 
+        that this.state was the best way to store and retrieve "global variables"; however, whenever you need to update just
+        one property in the state, you have re-define the whole state. This means I need to have global variables which
+        (in my opinoin) elminates the purpose of state. I need to learn more about what is standard. 
+    ☐ Create Monster Card Detail View @medium
+        I want the Compendium component to change from a dashboard view to a details view. 
+        Implementation Steps
+            ☐ Show blank screen on click
+            ☐ Set monster id on click
+            ☐ Query db and get monster information based on id
+            ☐ Query db and get all owned monster cards of that id
+            ☐ Display monster name
+            ☐ Show horizontal list of owned monsters of that id
+                by default have the highest level one selected
+            ☐ (left-center) Show selected monster's unlocked duel cards
+                If card is not unlocked yet, show a grayed out version of it.
+            ☐ (right) show current duel loadout (Like Hearthstone)
+            Save and revert button (don't push to database until save is pressed)
+    ☐ Create git for site so that I can work on it from anywhere.
+        It is sort of annoying that I can only work on this from my desktop even though it is all pretty lightweight.
+        Should I add it to a KAT git or should I create my own for now? I will ask TM.
+    ☐ Learn and implement best login practices
+        We are eventually going to use Google/Apple login so this matters a little less. I still want to know the best way
+        to verify and store userdata. Currently, once the user is verified, the username is stored in local storage which
+        I don't high confidence in because I feel that someone could manually store a username and bypass the verification
+        process. It might be better to add session id's that have to be generated and are difficult to mimick. 
+    ☐ Look into forum possibilities.
+        I want to implement our own forum but it might be more beneficial to just use some service to do it for us. One thing
+        I am worried about is accedentially losing data and posts. I am also worried about the amount of dependence on our own 
+        databases in general. AWS is an obvious solution but I am nervous because of the recent financial blunder.
+        What we would have to store
+            User
+                handle
+                number of posts
+                reputation
+                bio
+                most popular posts?
+            Posts
+                Name
+                CreatedDate
+                LastEditedDate
+                Content
+                Creator
+                Sticky?
+                Views
+                Comments
+                    User
+                    Content
+                    Views
+            Categories
+                Name
+                CreatedOn         
+        There is probably more but I can't think of anything else atm.       
+            
+Community: 
+    These are tasks related to blogs, forums posts, news, events, etc.. 
+
+    ☐ Create dev blog that outline goals, inspirations, and intentions. 
+    ☐ Create event for designing your own monster  
+        This will require creating clear documentation on monster types
+        We would also need to outline rules and limits for monster designs (i.e. no invinciable, all powerful, monster.)
