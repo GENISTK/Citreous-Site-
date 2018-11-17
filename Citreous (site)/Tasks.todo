@@ -18,23 +18,18 @@ Development:
         @test for tasks that are implemented that are primarily being tested. 
         @unsure for tasks that I am unsure if I will actually implement or not.
 
-    ☐ Get compendium filter to work @today @high 
-        This is already sort of done I just need to work out kinks with the setState statements.
-    ☐ Learn to correctly work with variables in REACT.js @medium
-        At this point I am using a combination of global variables (within classes), and this.state. I was lead to believe 
-        that this.state was the best way to store and retrieve "global variables"; however, whenever you need to update just
-        one property in the state, you have re-define the whole state. This means I need to have global variables which
-        (in my opinoin) elminates the purpose of state. I need to learn more about what is standard. 
     ☐ Create Monster Card Detail View @medium
         I want the Compendium component to change from a dashboard view to a details view. 
         Implementation Steps
-            ☐ Show blank screen on click
-            ☐ Set monster id on click
-            ☐ Query db and get monster information based on id
-            ☐ Query db and get all owned monster cards of that id
-            ☐ Display monster name
+            ✔ Show blank screen on click @done(18-11-16 19:30)
+            ✔ Set monster id on click @done(18-11-16 19:30)
+            ✔ Query db and get monster information based on id @done(18-11-16 19:30)
+            ✔ Query db and get all owned monster cards of that id @done(18-11-16 19:30)
+            ✔ Display monster name @done(18-11-16 19:30)
             ☐ Show horizontal list of owned monsters of that id
                 by default have the highest level one selected
+                I currently show cards but it is not in a horizontal scroll list. I downloaded a module to get
+                started but I decided to stop dev for the day.
             ☐ (left-center) Show selected monster's unlocked duel cards
                 If card is not unlocked yet, show a grayed out version of it.
             ☐ (right) show current duel loadout (Like Hearthstone)
@@ -124,8 +119,6 @@ Development:
             22. Modify session middleware settings
             23. A list of 40 generic security advice (see list)
 
-
-
 Community: 
     These are tasks related to blogs, forums posts, news, events, etc.. 
 
@@ -133,3 +126,12 @@ Community:
     ☐ Create event for designing your own monster  
         This will require creating clear documentation on monster types
         We would also need to outline rules and limits for monster designs (i.e. no invinciable, all powerful, monster.)
+
+Archive:
+  ✔ Learn to correctly work with variables in REACT.js @medium @done(18-11-16 19:29) @project(Development)
+    At this point I am using a combination of global variables (within classes), and this.state. I was lead to believe 
+    that this.state was the best way to store and retrieve "global variables"; however, whenever you need to update just
+    one property in the state, you have re-define the whole state. This means I need to have global variables which
+    (in my opinoin) elminates the purpose of state. I need to learn more about what is standard. 
+  ✔ Get compendium filter to work @today @high @done(18-11-16 19:26) @lasted(46s) @project(Development)
+    This is already sort of done I just need to work out kinks with the setState statements.
