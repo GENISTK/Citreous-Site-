@@ -18,14 +18,12 @@ Development:
         @test for tasks that are implemented that are primarily being tested. 
         @unsure for tasks that I am unsure if I will actually implement or not.
 
+    ☐ Create SQL for displaying owned duel cards
+    ☐ Create SQL for displaying equipped duel cards
+
     ☐ Create Monster Card Detail View @medium
         I want the Compendium component to change from a dashboard view to a details view. 
         Implementation Steps
-            ✔ Show blank screen on click @done(18-11-16 19:30)
-            ✔ Set monster id on click @done(18-11-16 19:30)
-            ✔ Query db and get monster information based on id @done(18-11-16 19:30)
-            ✔ Query db and get all owned monster cards of that id @done(18-11-16 19:30)
-            ✔ Display monster name @done(18-11-16 19:30)
             ☐ Show horizontal list of owned monsters of that id
                 by default have the highest level one selected
                 I currently show cards but it is not in a horizontal scroll list. I downloaded a module to get
@@ -34,9 +32,6 @@ Development:
                 If card is not unlocked yet, show a grayed out version of it.
             ☐ (right) show current duel loadout (Like Hearthstone)
             Save and revert button (don't push to database until save is pressed)
-    ☐ Create git for site so that I can work on it from anywhere.
-        It is sort of annoying that I can only work on this from my desktop even though it is all pretty lightweight.
-        Should I add it to a KAT git or should I create my own for now? I will ask TM.
     ☐ Learn and implement best login practices
         We are eventually going to use Google/Apple login so this matters a little less. I still want to know the best way
         to verify and store userdata. Currently, once the user is verified, the username is stored in local storage which
@@ -128,6 +123,39 @@ Community:
         We would also need to outline rules and limits for monster designs (i.e. no invinciable, all powerful, monster.)
 
 Archive:
+  ✔ Create a test version of how Duel Cards will work @started(18-11-19 14:23) @today @high @done(18-11-19 14:29) @lasted(6m55s) @project(Development)
+    We want cards to do different damange to different enemies so it doesn't work to just say
+    do X damage. So instead, we will borrow inspriation from Pokemon and keep the damage information vauge
+    while, in the back end, we will calculate the damage and give feedback. 
+    There should be a few types of cards like Attack, Defense, Status Effect, Boost, etc..
+    -Attack cards will always attempt to do damange
+    -Defense cards will always increase defense for the *next turn only!
+    -Status effects will apply effects over a certain number of rounds
+    -Deal damange every round
+    -Boost defense every round
+    -Boost cards apply increases to the monsters stats for a set amount of rounds
+    -Increased base damage
+    -Increased dodge/block chance
+    -Increased defense
+  ✔ Create a few test cards @today @high @started(18-11-19 14:30) @done(18-11-19 15:29) @lasted(59m33s) @project(Development)
+  ✔ update database structures @started(18-11-19 14:30) @done(18-11-19 15:28) @lasted(58m16s) @project(Development)
+  ✔ Attack @done(18-11-19 15:28) @project(Development)
+    Do basic damamge to foe
+  ✔ Defense @done(18-11-19 15:28) @project(Development)
+    Increase defense
+  ✔ Status Effect @done(18-11-19 15:29) @project(Development)
+    Do X Damage over Y turns
+  ✔ Boost @done(18-11-19 15:29) @project(Development)
+    More energy for next turn
+  ✔ Show blank screen on click @done(18-11-16 19:30) @project(Development)
+  ✔ Set monster id on click @done(18-11-16 19:30) @project(Development)
+  ✔ Query db and get monster information based on id @done(18-11-16 19:30) @project(Development)
+  ✔ Query db and get all owned monster cards of that id @done(18-11-16 19:30) @project(Development)
+  ✔ Display monster name @done(18-11-16 19:30) @project(Development)
+  ✘ Create git for site so that I can work on it from anywhere. @cancelled(18-11-17 23:53) @project(Development)
+  It is sort of annoying that I can only work on this from my desktop even though it is all pretty lightweight.
+  Should I add it to a KAT git or should I create my own for now? I will ask TM.
+  I realize in hind site that servers would have to be set up everytime to display changes so I will probably just nix this idea for now.
   ✔ Learn to correctly work with variables in REACT.js @medium @done(18-11-16 19:29) @project(Development)
     At this point I am using a combination of global variables (within classes), and this.state. I was lead to believe 
     that this.state was the best way to store and retrieve "global variables"; however, whenever you need to update just
